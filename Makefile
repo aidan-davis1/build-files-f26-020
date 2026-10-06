@@ -18,5 +18,8 @@ srcMLXPathCountTest : srcMLXPathCountTest.cpp srcMLXPathCount.hpp
 srcMLXPathCountTest.o : srcMLXPathCountTest.cpp srcMLXPathCountTest.hpp
 	g++ -c srcMLXPathCountTest.cpp
 
+run : srcComplexity
+	./srcComplexity srcMLXPathCount.cpp.xml
+
 clean :
 	@rm -f srcComplexity srcMLXPathCountTest srcComplexity.o srcMLXPathCount.o srcMLXPathCountTest.o
