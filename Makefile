@@ -12,7 +12,7 @@ srcComplexity.o : srcComplexity.cpp srcMLXPathCount.hpp
 srcMLXPathCount.o : srcMLXPathCount.cpp srcMLXPathCount.hpp
 	g++ -I/usr/include/libxml2 -c $<
 
-srcMLXPathCountTest : srcMLXPathCountTest.cpp srcMLXPathCount.o
+srcMLXPathCountTest : srcMLXPathCountTest.o srcMLXPathCount.o
 	g++ srcMLXPathCountTest.o srcMLXPathCount.o -lxml2 -o $@
 
 srcMLXPathCountTest.o : srcMLXPathCountTest.cpp srcMLXPathCount.hpp
